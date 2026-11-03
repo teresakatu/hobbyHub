@@ -14,11 +14,12 @@ right away.
 ## 2. Connect Supabase
 
 1. Create a project at [supabase.com](https://supabase.com/).
-2. Open **SQL Editor → New query**, paste all of [`supabase/schema.sql`](supabase/schema.sql), and click **Run**.
-   This creates the `posts` and `comments` tables (with RLS disabled, as the course
-   instructs), the `increment_upvotes` function, and the `post-images` storage bucket.
-3. (Optional) Run [`supabase/seed.sql`](supabase/seed.sql) the same way to add sample posts.
-4. This repo's `.env` is already set up for the project at
+2. Open **SQL Editor → New query**, paste all of [`supabase/setup.sql`](supabase/setup.sql), and click **Run**.
+   This one file creates the `posts` and `comments` tables, sets up access, the
+   `increment_upvotes` function and the `post-images` storage bucket, and adds the
+   sample posts. It is safe to run again: it never creates duplicates, and it
+   removes any duplicate sample posts left over from earlier runs.
+3. This repo's `.env` is already set up for the project at
    `https://ratduyjeqabtmjrszjqi.supabase.co` with its publishable key. To use a
    different project, replace both values in `.env` with the ones from
    **Project Settings → API Keys** (Project URL and publishable/anon key):
@@ -28,7 +29,7 @@ right away.
    VITE_SUPABASE_ANON_KEY=your-publishable-key
    ```
 
-5. Restart `npm run dev`. The demo-mode banner disappears once you're connected.
+4. Restart `npm run dev`. The demo-mode banner disappears once you're connected.
 
 ## Project structure
 
@@ -38,7 +39,7 @@ src/
   lib/AppContext.jsx  user ID, theme, feed-detail toggle, search
   pages/              Home, CreatePost, PostPage, EditPost
   components/         Navbar, PostCard, PostForm, Comments, Loader, ...
-supabase/             schema.sql and seed.sql
+supabase/setup.sql    database setup + sample data (safe to re-run)
 ```
 
 ## Database
