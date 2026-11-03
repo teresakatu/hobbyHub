@@ -77,7 +77,17 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+**Part 1: Home feed, sorting, search, filters and customization**
+
+<img src='http://i.imgur.com/link/to/your/gif/part1.gif' title='Video Walkthrough Part 1' width='' alt='Video Walkthrough Part 1' />
+
+**Part 2: Creating a post, upvoting and comments**
+
+<img src='http://i.imgur.com/link/to/your/gif/part2.gif' title='Video Walkthrough Part 2' width='' alt='Video Walkthrough Part 2' />
+
+**Part 3: Editing, reposts/threads, author lock and deleting**
+
+<img src='http://i.imgur.com/link/to/your/gif/part3.gif' title='Video Walkthrough Part 3' width='' alt='Video Walkthrough Part 3' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...
