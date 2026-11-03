@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useState } from 'react'
 
 const AppContext = createContext(null)
@@ -18,7 +17,6 @@ function usePersistentState(key, fallback) {
     try {
       localStorage.setItem(key, JSON.stringify(value))
     } catch {
-      /* storage unavailable — keep in memory only */
     }
   }, [key, value])
   return [value, setValue]
@@ -30,7 +28,6 @@ export function makeUserId() {
 }
 
 export function AppProvider({ children }) {
-  // Pseudo-authentication: every visitor gets a random ID on first launch.
   const [userId, setUserId] = usePersistentState('gfd-user-id', null)
   const [theme, setTheme] = usePersistentState('gfd-theme', 'espresso')
   const [showDetails, setShowDetails] = usePersistentState('gfd-show-details', false)

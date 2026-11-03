@@ -1,5 +1,3 @@
-// Single data layer for the whole app. Every page talks to these functions,
-// which use Supabase when keys are configured and localStorage otherwise.
 import { supabase } from './client'
 import { buildSampleData } from './sampleData'
 import { compressImage } from './image'
@@ -13,9 +11,6 @@ function unwrap({ data, error }) {
   return data
 }
 
-/* ------------------------------------------------------------------ */
-/* Demo-mode store (browser localStorage)                              */
-/* ------------------------------------------------------------------ */
 const STORE_KEY = 'gfd-demo-db-v1'
 const delay = (ms = 350) => new Promise((r) => setTimeout(r, ms))
 
@@ -24,7 +19,6 @@ function loadDb() {
     const raw = localStorage.getItem(STORE_KEY)
     if (raw) return JSON.parse(raw)
   } catch {
-    /* fall through to seed */
   }
   const db = buildSampleData()
   saveDb(db)
@@ -43,9 +37,6 @@ export function resetDemoData() {
   localStorage.removeItem(STORE_KEY)
 }
 
-/* ------------------------------------------------------------------ */
-/* Posts                                                               */
-/* ------------------------------------------------------------------ */
 export async function getPosts({ orderBy = 'created_at', search = '', flag = '' } = {}) {
   const term = search.trim()
   if (supabase) {
@@ -142,13 +133,10 @@ export async function deletePost(id) {
   saveDb(db)
 }
 
-/** Adds one upvote and returns the new total. */
 export async function upvotePost(id, currentCount) {
   if (supabase) {
-    // Prefer the atomic database function from supabase/schema.sql...
     const { data, error } = await supabase.rpc('increment_upvotes', { row_id: Number(id) })
     if (!error) return data
-    // ...but fall back to a plain update if it hasn't been created.
     const row = unwrap(
       await supabase
         .from(POSTS)
@@ -166,9 +154,6 @@ export async function upvotePost(id, currentCount) {
   return post.upvotes
 }
 
-/* ------------------------------------------------------------------ */
-/* Comments                                                            */
-/* ------------------------------------------------------------------ */
 export async function getComments(postId) {
   if (supabase) {
     return unwrap(
@@ -207,14 +192,6 @@ export async function deleteComment(id) {
   saveDb(db)
 }
 
-/* ------------------------------------------------------------------ */
-/* Image upload                                                        */
-/* ------------------------------------------------------------------ */
-/**
- * Uploads a local image file and returns a URL for it. With Supabase this
- * goes to the `post-images` storage bucket; if the bucket isn't set up (or in
- * demo mode) the compressed image is stored inline as a data URL instead.
- */
 export async function uploadImage(file) {
   if (!file.type.startsWith('image/')) throw new Error('Please choose an image file.')
   const { blob, dataUrl } = await compressImage(file)

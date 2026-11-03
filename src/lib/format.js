@@ -24,7 +24,6 @@ export function fullDate(iso) {
   })
 }
 
-/** Turns a YouTube / Vimeo / direct video link into something we can embed. */
 export function toVideoEmbed(raw) {
   if (!raw) return null
   let url

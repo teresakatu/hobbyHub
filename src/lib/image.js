@@ -1,4 +1,3 @@
-/** Downscales an image file in the browser so uploads stay small. */
 export async function compressImage(file, maxSize = 1280, quality = 0.85) {
   const bitmap = await createImageBitmap(file)
   const scale = Math.min(1, maxSize / Math.max(bitmap.width, bitmap.height))

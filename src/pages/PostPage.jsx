@@ -52,7 +52,6 @@ export default function PostPage() {
   }, [id])
 
   const upvote = async () => {
-    // Optimistic update so rapid clicks feel instant.
     setPost((p) => ({ ...p, upvotes: p.upvotes + 1 }))
     setBump((b) => b + 1)
     try {

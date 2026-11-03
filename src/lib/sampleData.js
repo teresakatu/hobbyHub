@@ -1,5 +1,3 @@
-// Starter content used in demo mode (no Supabase keys). The same posts live in
-// supabase/seed.sql so your real database can start with something to show.
 const HOUR = 3600 * 1000
 const DAY = 24 * HOUR
 

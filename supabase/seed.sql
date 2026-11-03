@@ -1,6 +1,3 @@
--- Grounds for Discussion: sample data (run AFTER schema.sql).
--- Same starter posts the app uses in demo mode.
-
 insert into public.posts (created_at, title, content, image_url, flag, upvotes, author_id) values
   (now() - interval '2 hours', 'What''s your go-to pour-over ratio?',
    'I''ve been brewing a V60 every morning with 1:16 (20g coffee to 320g water), but my friend swears by 1:15 for a sweeter cup. What ratio do you use, and does it change with the roast level?',
@@ -24,7 +21,6 @@ insert into public.posts (created_at, title, content, image_url, flag, upvotes, 
    'Got a behind-the-scenes look at a small-batch roaster this weekend. Watching them pull samples to check color every 30 seconds gave me a whole new respect for consistency.',
    'https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80', 'Showcase', 19, 'brewer-c09b44');
 
--- A repost that threads onto the pour-over question.
 insert into public.posts (created_at, title, content, flag, upvotes, author_id, repost_of)
 select now() - interval '1 hour', 'Tested 1:15 vs 1:17 side by side',
        'Following up on the ratio thread: I brewed the same Ethiopian beans both ways. 1:15 was syrupy and fruit-forward; 1:17 was cleaner and more tea-like. Honestly both were great, so pick based on mood!',

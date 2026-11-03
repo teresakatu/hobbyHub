@@ -18,7 +18,6 @@ export default function PostForm({ initial, submitLabel, onSubmit, excludeRepost
 
   const set = (field) => (e) => setForm((f) => ({ ...f, [field]: e.target.value }))
 
-  // Look up the referenced post as the user types its ID.
   useEffect(() => {
     const id = String(form.repost_of).trim()
     if (!id) {
@@ -73,7 +72,6 @@ export default function PostForm({ initial, submitLabel, onSubmit, excludeRepost
     }
     setSaving(true)
     try {
-      // Verify directly so a still-running preview lookup can't block submit.
       if (repostId && repostPreview.status !== 'found') {
         const exists = /^\d+$/.test(repostId) && (await getPost(repostId))
         if (!exists) {

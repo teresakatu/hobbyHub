@@ -1,4 +1,3 @@
-/* ---------- Themes ---------- */
 :root,
 [data-theme='espresso'] {
   --bg: #1c1411;
@@ -54,7 +53,6 @@
   color-scheme: light;
 }
 
-/* ---------- Base ---------- */
 *,
 *::before,
 *::after {
@@ -179,7 +177,6 @@ textarea {
   box-shadow: var(--shadow);
 }
 
-/* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -240,7 +237,6 @@ textarea {
 .icon-btn:hover { border-color: var(--accent); }
 .icon-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
 
-/* ---------- Navbar ---------- */
 .navbar {
   position: sticky;
   top: 0;
@@ -394,7 +390,6 @@ textarea {
 }
 .demo-banner code { font-size: 0.85em; }
 
-/* ---------- Home ---------- */
 .hero {
   padding: 1.5rem 0 1rem;
 }
@@ -464,7 +459,6 @@ textarea {
 }
 .chip:first-child.is-active { --chip: var(--accent); }
 
-/* Flag colors */
 .chip--question, .flag--question { --chip: #5aa9e6; }
 .chip--opinion, .flag--opinion { --chip: #e07a5f; }
 .chip--recipe, .flag--recipe { --chip: #c9a227; }
@@ -552,7 +546,6 @@ textarea {
 .empty h2, .empty h3 { margin-bottom: 0.4rem; }
 .empty .btn { margin-top: 0.75rem; }
 
-/* ---------- Forms ---------- */
 .form {
   padding: 1.5rem;
   display: grid;
@@ -595,7 +588,6 @@ fieldset.field .chips { margin-top: 0.1rem; }
 }
 .back-link:hover { color: var(--accent); }
 
-/* ---------- Post page ---------- */
 .post { padding: 1.75rem; }
 .post__meta {
   display: flex;
@@ -690,7 +682,6 @@ fieldset.field .chips { margin-top: 0.1rem; }
 
 .thread { margin-top: 2rem; }
 
-/* ---------- Comments ---------- */
 .comments { margin-top: 2rem; }
 .comments h2 { display: flex; align-items: center; gap: 0.5rem; }
 .count {
@@ -722,7 +713,6 @@ fieldset.field .chips { margin-top: 0.1rem; }
 .comment-form { display: flex; gap: 0.6rem; }
 .comment-form input { border-radius: 999px; }
 
-/* ---------- Loader ---------- */
 .loader {
   display: flex;
   flex-direction: column;
@@ -770,7 +760,6 @@ fieldset.field .chips { margin-top: 0.1rem; }
   border-top: 1px solid var(--border);
 }
 
-/* ---------- Responsive ---------- */
 @media (max-width: 720px) {
   .navbar__inner { flex-wrap: wrap; gap: 0.6rem; }
   .brand span { font-size: 1rem; }

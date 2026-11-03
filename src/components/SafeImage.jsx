@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-/** An <img> that hides itself (with a friendly note) when the URL is broken. */
 export default function SafeImage({ src, alt, className, note = true }) {
   const [failed, setFailed] = useState(false)
   if (!src) return null

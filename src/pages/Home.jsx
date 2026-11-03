@@ -18,7 +18,6 @@ export default function Home() {
     let active = true
     setLoading(true)
     setError('')
-    // Small debounce so we don't query on every keystroke.
     const t = setTimeout(() => {
       getPosts({ orderBy, search, flag })
         .then((data) => active && setPosts(data))

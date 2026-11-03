@@ -3,11 +3,6 @@ import { timeAgo } from '../lib/format'
 import FlagBadge from './FlagBadge'
 import SafeImage from './SafeImage'
 
-/**
- * Feed card. By default it shows only the creation time, title and upvotes.
- * When "show details" is enabled in settings it also shows flag, author,
- * a content preview and the image.
- */
 export default function PostCard({ post, detailed = false, compact = false }) {
   return (
     <Link to={`/post/${post.id}`} className={`card post-card ${compact ? 'post-card--compact' : ''}`}>

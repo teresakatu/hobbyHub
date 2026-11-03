@@ -18,12 +18,14 @@ right away.
    This creates the `posts` and `comments` tables (with RLS disabled, as the course
    instructs), the `increment_upvotes` function, and the `post-images` storage bucket.
 3. (Optional) Run [`supabase/seed.sql`](supabase/seed.sql) the same way to add sample posts.
-4. Copy `.env.example` to `.env` and fill in the values from
-   **Project Settings → API** (Project URL and anon/publishable key):
+4. This repo's `.env` is already set up for the project at
+   `https://ratduyjeqabtmjrszjqi.supabase.co` with its publishable key. To use a
+   different project, replace both values in `.env` with the ones from
+   **Project Settings → API Keys** (Project URL and publishable/anon key):
 
    ```
    VITE_SUPABASE_URL=https://your-project-ref.supabase.co
-   VITE_SUPABASE_ANON_KEY=your-anon-or-publishable-key
+   VITE_SUPABASE_ANON_KEY=your-publishable-key
    ```
 
 5. Restart `npm run dev`. The demo-mode banner disappears once you're connected.
