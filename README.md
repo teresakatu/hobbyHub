@@ -1,10 +1,10 @@
 # Web Development Final Project - Grounds for Discussion
 
-Submitted by: **Kha Tu Nguyen**
+Submitted by: **Teresa Nguyen**
 
 This web app: **Grounds for Discussion is a HobbyHub forum for home coffee brewers. Users can share pour-over recipes, gear questions, latte-art wins and hot takes; browse a feed sorted by newest or most popular; search and filter by flag; and open any post to read the full content, image, and video, upvote it, comment on it, or repost it into a thread.**
 
-Time spent: **X** hours spent in total
+Time spent: **8** hours spent in total
 
 ## Required Features
 
@@ -77,24 +77,13 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-**Part 1: Home feed, sorting, search, filters and customization**
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<img src='http://i.imgur.com/link/to/your/gif/part1.gif' title='Video Walkthrough Part 1' width='' alt='Video Walkthrough Part 1' />
+Browsing the feed: https://i.imgur.com/7UaXxsi.gif
+Create, upvote, comment: https://i.imgur.com/yQGejJn.gif
+Edit, thread, lock, delete: https://i.imgur.com/D76KXsh.gif
 
-**Part 2: Creating a post, upvoting and comments**
-
-<img src='http://i.imgur.com/link/to/your/gif/part2.gif' title='Video Walkthrough Part 2' width='' alt='Video Walkthrough Part 2' />
-
-**Part 3: Editing, reposts/threads, author lock and deleting**
-
-<img src='http://i.imgur.com/link/to/your/gif/part3.gif' title='Video Walkthrough Part 3' width='' alt='Video Walkthrough Part 3' />
-
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with [Kap](https://getkap.co/) for macOS
 
 ## Notes
 
@@ -108,7 +97,7 @@ Setup instructions are in [SETUP.md](SETUP.md).
 
 ## License
 
-    Copyright 2026 Kha Tu Nguyen
+    Copyright 2026 Teresa Nguyen
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
