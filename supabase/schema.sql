@@ -25,6 +25,14 @@ create index if not exists posts_repost_of_idx on public.posts (repost_of);
 alter table public.posts disable row level security;
 alter table public.comments disable row level security;
 
+drop policy if exists "Public access to posts" on public.posts;
+create policy "Public access to posts" on public.posts
+  for all to anon, authenticated using (true) with check (true);
+
+drop policy if exists "Public access to comments" on public.comments;
+create policy "Public access to comments" on public.comments
+  for all to anon, authenticated using (true) with check (true);
+
 grant select, insert, update, delete on public.posts, public.comments to anon, authenticated;
 grant usage, select on all sequences in schema public to anon, authenticated;
 
